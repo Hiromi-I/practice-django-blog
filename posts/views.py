@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.views.generic import ListView
 
-# Create your views here.
+from .models import Post
+
+
+class PostsListView(ListView):
+    model = Post
+    queryset = Post.objects.all()
+    context_object_name = "posts"
