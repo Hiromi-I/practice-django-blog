@@ -2,6 +2,6 @@
 
 {% block contents %}
   {% for post in posts %}
-    <p>{{ post.title }}<p>
+    <p><a href="{% url 'posts:posts-detail' post.id %}">{{ post.title }}</a><p>
   {% endfor %}
 {% endblock contents %}
