@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+  <main class="container mx-auto">
+    <div class="flex-col">
+      {% for post in posts %}
+        <section class="w-1/2 mb-4 bg-gray-50 shadow">
+          <a class="block p-4" href="{% url 'posts:posts-detail' post.id %}">
+            <h2 class="text-lg">{{ post.title }}</h2>
+            <p class="text-right">続きを読む</p>
+          </a>
+        </section>
+      {% endfor %}
+    </div>
+  </main>
+{% endblock contents %}

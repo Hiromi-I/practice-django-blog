@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+  <main class="container w-1/2 mx-auto">
+    <h2 class="font-bold text-2xl mb-4">{{ post.title }}</h2>
+    <p class="text-sm text-gray-500 text-right">作成日: {{ post.created_at }}</p>
+    <p class="text-sm text-gray-500 text-right mb-4">更新日: {{ post.updated_at }}</p>
+    <p class="leading-relaxed">{{ post.body }}</p>
+  </main>
+{% endblock contents %}
